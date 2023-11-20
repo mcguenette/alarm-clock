@@ -7,6 +7,7 @@
     --primary-green: #55B95F;
     --secondary-green:#458f4c;
     --primary-pink: #FF3263;
+    --secondary-pink: #cc254c;
     --primary-blue: #4169E1;
     --primary-red: #EB4444;
 }
@@ -41,6 +42,7 @@ section {
 #time {
     font-size: 123px;
     font-family: 'Exo', sans-serif;
+    padding: 20px;
 }
 
 .alarm-stamp {
@@ -48,6 +50,7 @@ section {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
+    padding: 5px 20px;
 }
 
 /* .alarm-stamp i {
@@ -63,7 +66,10 @@ section {
 .information p {
     font-size: 12px;
     font-style: italic;
-    margin-top: 10px;
+}
+
+.information {
+    padding: 5px 20px;
 }
 
 input {
@@ -126,4 +132,8 @@ input[type=text] {
 
 .secondary-button {
     background-color: var(--primary-pink);
+}
+
+.secondary-button:hover {
+    background-color: var(--secondary-pink);
 }
