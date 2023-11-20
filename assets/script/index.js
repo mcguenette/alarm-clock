@@ -14,6 +14,7 @@ const hours = select('#hours');
 const minutes = select('#minutes');
 const displayTime = select('#time');
 
+// Current time + formatting the time for two decimals, etc.
 function getCurrentTime() {
     const currentTime = new Date();
     const currentHour = formatTime(currentTime.getHours());
@@ -26,23 +27,19 @@ function formatTime(time) {
     return time < 10 ? '0' + time : time;
 }
 
+// Validation for alarm
 function validateAlarm() {
     let numbersRegex = /^[0-9]+$/;
     
     const hoursInput = parseInt(hours.value, 10);
     const minutesInput = parseInt(minutes.value, 10);
 
-    // validate hours
     if (!hoursInput.toString().match(numbersRegex) || hoursInput < 0 || hoursInput > 23) {
         alarm.innerText = 'Please enter a valid number between 0 and 23 for hours.';
-        alarm.style.color = '#FF3263';
         return;
     }
-    // validate minutes
     if (!minutesInput.toString().match(numbersRegex) || minutesInput < 0 || minutesInput > 59) {
         alarm.innerText = 'Please enter a valid number between 0 and 59 for minutes.';
-        alarm.style.color = '#FF3263';
-        
         return;
     }
 
@@ -51,6 +48,7 @@ function validateAlarm() {
      setAlarm(hoursInput, minutesInput);
 }
 
+// Set the alarm - output time + play audio
 function setAlarm(hoursInput, minutesInput) {
     alarmTime = new Date();
     alarmTime.setHours(hoursInput);
@@ -69,6 +67,7 @@ function setAlarm(hoursInput, minutesInput) {
     }
 }
 
+// clear alarm/ reset when clicked. Also pauses audio
 function clearAlarm() {
     audio.pause();
     if (alarmTimeout) {
@@ -78,6 +77,8 @@ function clearAlarm() {
     }
 }
 
+// On event clicks:
+
 onEvent('click', alarmBtn, function () {
     validateAlarm();
 });
@@ -86,4 +87,5 @@ onEvent('click', clearBtn, function () {
     clearAlarm();
 });
 
+// Interval to check every second.
 setInterval(getCurrentTime, 1000);

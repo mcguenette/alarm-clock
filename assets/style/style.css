@@ -28,6 +28,14 @@ body {
     min-height: 100dvh;
 }
 
+section {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
 /* Time */
 
 #time {
@@ -68,13 +76,6 @@ input[type=text] {
     width: 50px;
     margin: 5px;
     border: 1px solid var(--secondary-color);
-    border-radius: 4px;
-}
-
-section {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
     border-radius: 4px;
 }
 
