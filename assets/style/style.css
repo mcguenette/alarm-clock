@@ -30,10 +30,16 @@ body {
 
 /* Time */
 
-/* #current-local-time {
+#time {
+    font-size: 123px;
     font-family: 'Exo', sans-serif;
-    font-size: 72px;
-} */
+}
+
+input[type=text] {
+    padding: 8px;
+    width: 75px;
+    margin: 5px;
+}
 
 .controls {
     margin-top: 20px;
@@ -54,6 +60,7 @@ body {
   transform: translate3d(0, 0, 0);
   transition: all .3s;
   touch-action: manipulation;
+  margin: 5px;
 }
 
 .button:hover {
