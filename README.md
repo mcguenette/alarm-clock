@@ -1,3 +1,5 @@
+## Alarm Clock
+
 ### Variables:
 alarmTime: Represents the time at which the alarm is set.
 alarmTimeout: Represents the timeout ID for the alarm, used to clear the alarm if needed.
@@ -31,4 +33,4 @@ Clicking the "Set Alarm" button triggers the validateAlarm function.
 Clicking the "Clear Alarm" button triggers the clearAlarm function.
 
 
-[Demo](https://mcguenette.github.io/alarm-clock/)
+Click [demo](https://mcguenette.github.io/alarm-clock/) to view
