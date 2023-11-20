@@ -35,9 +35,31 @@ body {
     font-family: 'Exo', sans-serif;
 }
 
+.alarm-stamp {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+/* .alarm-stamp i {
+    color: var(--primary-green);
+} */
+
 #set-alarm {
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 12px;
+    height: 16px;
+}
+
+.information p {
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+input {
+    height: 42px;
 }
 
 input[type=text] {
@@ -46,6 +68,7 @@ input[type=text] {
     width: 50px;
     margin: 5px;
     border: 1px solid var(--secondary-color);
+    border-radius: 4px;
 }
 
 section {
@@ -61,7 +84,7 @@ section {
 
 /* Buttons */
 .button {
-  border-radius: 6px;
+  border-radius: 4px;
   box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
   color: var(--primary-color);
   display: inline-block;

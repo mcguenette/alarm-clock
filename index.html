@@ -16,14 +16,16 @@
         <div class="container">
             <section>
                 <div id="time"></div>
-                <i class="fa-solid fa-bell"></i><span id="set-alarm"></span>
-                <div class="controls">
-                        <input type="text" minlength="2" maxlength="2" id="hours"/>
-                        <input type="text" minlength="2" maxlength="2" id="minutes"/>
-                        
-                        <input type="button" value="Set alarm" id="alarm-btn" class="primary-button button"/>
-                        <input type="button" value="Clear alarm" id="clear-btn" class="secondary-button button"/>
+                <div class="alarm-stamp">
+                    <i class="fa-solid fa-bell"></i><span id="set-alarm"></span>
                 </div>
+                    <form action="" method="get"  class="controls">
+                        <input type="text" minlength="2" maxlength="2" id="hours" placeholder="00"/> :
+                        <input type="text" minlength="2" maxlength="2" id="minutes" placeholder="00"/>
+                        <input type="button" value="Set alarm" id="alarm-btn" class="primary-button button"/>
+                        <input type="button" value="Reset" id="clear-btn" class="secondary-button button"/>
+                </form>
+                <div class="information"><p>Note: The time format used is based on the 24-hour clock system</p></div>
             </section>
         </div>
     </main>
