@@ -35,10 +35,24 @@ body {
     font-family: 'Exo', sans-serif;
 }
 
+#set-alarm {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
 input[type=text] {
+    text-align: center;
     padding: 8px;
-    width: 75px;
+    width: 50px;
     margin: 5px;
+    border: 1px solid var(--secondary-color);
+}
+
+section {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
 }
 
 .controls {
